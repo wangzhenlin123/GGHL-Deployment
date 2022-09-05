@@ -59,7 +59,7 @@ void draw_objects(cv::Mat bgr, vector<OBBInfo8> objects)
     cv::imwrite("/home/crescent/GGHL_demo/deploy/ncnn/demo.png", img);
 }
 int main(int, char**) {
-    GGHL_ncnn detector = GGHL_ncnn("/home/crescent/GGHL_demo/deploy/ncnn/demo2.param", "/home/crescent/GGHL_demo/deploy/ncnn/demo2.bin", false);
+    GGHL_ncnn detector = GGHL_ncnn("/home/crescent/GGHL-Deployment/ncnn/GGHL_jit.ncnn.param", "/home/crescent/GGHL-Deployment/ncnn/GGHL_jit.ncnn.bin", false);
     //怎么样处理
     cv::Mat img = cv::imread("/home/crescent/images/P0006__1024__0___505.png");
     auto results = detector.detect(img,0.00,IOU_THRESH);

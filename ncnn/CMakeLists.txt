@@ -9,8 +9,10 @@ add_executable(ncnn_GGHL main.cpp GGHL.cpp)
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 set(OpenCV_DIR /home/crescent/build)
-set(ncnn_DIR /home/crescent/ncnn/build/install/lib/cmake/ncnn)
-include_directories(/home/crescent/GGHL_demo/deploy/ncnn/)
+set(ncnn_DIR /home/crescent/ncnn/build/src)
+
+include_directories(/home/crescent/GGHL-Deployment/ncnn/)
+
 # find Opencv 
 find_package(OpenCV REQUIRED)
 find_package(ncnn REQUIRED)
